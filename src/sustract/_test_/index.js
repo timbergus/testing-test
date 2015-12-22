@@ -1,5 +1,5 @@
 import test from 'tape';
-import { multiply } from '../';
+import Subtract from '../';
 
 let name = __dirname.split('/');
 
@@ -10,5 +10,5 @@ if (name.length <= 1) {
 test(`Function ${ name[name.length - 2].toUpperCase() }`, t => {
 
     t.plan(1);
-    t.equal(multiply(2, 3), 6, 'multiplies two numbers');
+    t.equal(Subtract.twoNumbers(3, 2), 1, 'subtracts two numbers');
 });

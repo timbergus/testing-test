@@ -1,4 +1,7 @@
-let multiply = (a, b) => a * b;
-let duplicate = a => 2 * a;
+export function multiply (a, b) {
+    return a * b;
+}
 
-export default multiply;
+export function double (a) {
+    return 2 * a;
+}
