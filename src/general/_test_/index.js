@@ -1,20 +1,22 @@
 import test from 'tape';
 import request from 'superagent';
-import nocks from './nocks';
 
-test('equality', t => {
+import user1 from './nocks/user-1';
+import user2 from './nocks/user-2';
 
-    t.plan(1);
-    t.same([1, 2], [1, 2]);
-});
-
-test('foo', t => {
+test('Simple test', t => {
 
     t.plan(1);
-    t.pass('Should work!');
+    t.same([1, 2], [1, 2], 'that should work');
 });
 
-test('User 1 exists', t => {
+test('Another simple test', t => {
+
+    t.plan(1);
+    t.pass('that should work too');
+});
+
+test('Asynchronous test', t => {
 
     t.plan(1);
 
@@ -23,18 +25,18 @@ test('User 1 exists', t => {
         .end((err) => {
             if (err) {
 
-                t.fail('User 1 not found');
+                t.fail('that is not working');
                 t.end();
 
             } else {
 
-                t.pass('User 1 found');
+                t.pass('that must success');
                 t.end();
             }
         });
 });
 
-test('User 2 exists', t => {
+test('Asynchronous test', t => {
 
     t.plan(1);
 
@@ -43,12 +45,12 @@ test('User 2 exists', t => {
         .end((err) => {
             if (err) {
 
-                t.pass('User 2 not found');
+                t.pass('that must fail to success');
                 t.end();
 
             } else {
 
-                t.fail('User 2 found');
+                t.fail('that is not working');
                 t.end();
             }
         });

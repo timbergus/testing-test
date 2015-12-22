@@ -7,5 +7,5 @@ require('babel-core/register')({
 glob(__dirname + '/src/**/_test_', function (err, files) {
     files.map(function (file) {
         require(file);
-    })
+    });
 });
