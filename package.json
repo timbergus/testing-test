@@ -19,7 +19,6 @@
   },
   "scripts": {
     "test": "nyc --reporter=lcov node test.js | tap-spec",
-    "tape-test": "node tape-test.js | tap-spec",
     "start": "node run.js"
   },
   "keywords": [
