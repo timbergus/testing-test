@@ -22,7 +22,7 @@
     "start": "node run.js"
   },
   "keywords": [
-    "ava",
+    "tape",
     "nock"
   ],
   "author": "Gustavo Muñoz <timbergus@gmail.com>",
