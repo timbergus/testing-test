@@ -1,6 +1,7 @@
 import add from './add';
 import { multiply, double } from './multiply';
 import Subtract from './sustract';
+import Header from './components/header';
 
 console.log(`The sum is ${ add(3, 2) }`);
 console.log(`The multiplication is ${ multiply(3, 2) }`);
